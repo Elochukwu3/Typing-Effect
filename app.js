@@ -17,11 +17,11 @@ class typeEffect {
       this.text = eachText.substring(0, this.text.length + 1);
     }
     this.displayArea.innerHTML = `<span class="txt">${this.text}</span>`;
-    let textSpeed = 300;
+    let textSpeed = 400;
 
-    if (this.isDeleting) {
-      textSpeed /= 2;
-    }
+    // if (this.isDeleting) {
+    //   textSpeed /= 2;
+    // }
 
     if (!this.isDeleting && this.text === eachText) {
       textSpeed = 2000;
