@@ -1,4 +1,3 @@
-
 //making use and practice of javaScript classee
 class typeEffect {
   constructor(displayArea, words) {
@@ -12,10 +11,10 @@ class typeEffect {
   type() {
     //setting the current word not to exceed the word arrray length
     const current = this.index % this.words.length;
-    let eachText = this.words[current];//assigning a variable to the current word
+    let eachText = this.words[current]; //assigning a variable to the current word
 
     if (this.isDeleting) {
-      this.text = eachText.substring(0, this.text.length - 1);//if isDeleting is true(remove each of the word from back)
+      this.text = eachText.substring(0, this.text.length - 1); //if isDeleting is true(remove each of the word from back)
     } else {
       this.text = eachText.substring(0, this.text.length + 1); // if it is not deleting (add each of the word by adding the length)
     }
@@ -36,7 +35,7 @@ class typeEffect {
         textSpeed = 400;
       }
     }
-    setTimeout(() => this.type(), textSpeed);//setTimeout to call the type method/function at each text speed
+    setTimeout(() => this.type(), textSpeed); //setTimeout to call the type method/function at each text speed
   }
 }
 function intialize() {
