@@ -1,7 +1,7 @@
 body {
     font-family:'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     height: 100vh;
-    background: #333 url(./images/chess.jpg) no-repeat center center / cover;
+    background: #333 url(./images/hux.webp) no-repeat center center / cover;
     color: #fff;
     overflow: hidden;
 }
