@@ -24,6 +24,8 @@ class typeEffect{
         if (this.isDeleting  && this.text === eachText) {
             this.isDeleting = true
             
+        }else if(this.isDeleting && this.text === ''){
+            this.index ++
         }
       
     }
