@@ -10,31 +10,33 @@ class typeEffect{
     }
     type(){
         const current = this.index % this.words.length;
-        console.log(this.words);
         let eachText = this.words[current];
-        console.log(eachText);
         if (this.isDeleting) {
-            this.text = eachText.substring(0, this.text.length -1)
+            this.text = eachText.substring(0, this.text.length - 1)
+            console.log(this.text);
 
         }else{
             this.text = eachText.substring(0, this.text.length + 1)
-            console.log(this.text);
+            
         }
         this.displayArea.innerHTML = `<span class="txt">${this.text}</span>`;
         if (this.isDeleting  && this.text === eachText) {
             this.isDeleting = true
             
-        }else if(this.isDeleting && this.text === ''){
-            this.index ++
-        }
-      
+        }else{
+            if(!this.isDeleting && this.text === ''){
+                this.isDeleting = false
+                this.index ++
+            }
+        } 
+        setTimeout(()=>this.type(), 100)
     }
 }
 function intialize() {
     const data = ["Software Developer", "Frontend Developer", "Blockchain Developer"];
     const displayArea = document.querySelector('.text-container');
 
-    const kk = new typeEffect(displayArea, data)
-    kk.type()
+  new typeEffect(displayArea, data)
+    
 }
 document.addEventListener("DOMContentLoaded", intialize)
