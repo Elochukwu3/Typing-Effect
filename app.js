@@ -17,14 +17,14 @@ class typeEffect {
     if (this.isDeleting) {
       this.text = eachText.substring(0, this.text.length - 1);//if isDeleting is true(remove each of the word from back)
     } else {
-      this.text = eachText.substring(0, this.text.length + 1); //
+      this.text = eachText.substring(0, this.text.length + 1); // if it is not deleting (add each of the word by adding the length)
     }
     this.displayArea.innerHTML = `<span class="txt">${this.text}</span>`;
     let textSpeed = 400;
 
-    // if (this.isDeleting) {
-    //   textSpeed /= 2;
-    // }
+    if (this.isDeleting) {
+      textSpeed /= 2;
+    }
 
     if (!this.isDeleting && this.text === eachText) {
       textSpeed = 2000;
