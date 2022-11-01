@@ -1,3 +1,5 @@
+
+//making use and practice of javaScript classee
 class typeEffect {
   constructor(displayArea, words) {
     this.displayArea = displayArea;
@@ -8,8 +10,9 @@ class typeEffect {
     this.isDeleting = false;
   }
   type() {
+    //setting the current word not to exceed the word arrray length
     const current = this.index % this.words.length;
-    let eachText = this.words[current];
+    let eachText = this.words[current];//assigning a variable to the current word
     if (this.isDeleting) {
       this.text = eachText.substring(0, this.text.length - 1);
       console.log(this.text);
