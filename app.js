@@ -20,16 +20,24 @@ class typeEffect{
             
         }
         this.displayArea.innerHTML = `<span class="txt">${this.text}</span>`;
-        if (this.isDeleting  && this.text === eachText) {
+        let textSpeed = 300;
+
+        if(this.isDeleting) {
+          textSpeed /= 2;
+        }
+    
+        if (!this.isDeleting  && this.text === eachText) {
+            textSpeed = 2000
             this.isDeleting = true
             
         }else{
-            if(!this.isDeleting && this.text === ''){
+            if(this.isDeleting && this.text === ''){
                 this.isDeleting = false
                 this.index ++
+                textSpeed = 400
             }
         } 
-        setTimeout(()=>this.type(), 100)
+        setTimeout(()=>this.type(), textSpeed)
     }
 }
 function intialize() {
