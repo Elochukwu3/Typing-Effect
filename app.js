@@ -36,7 +36,7 @@ class typeEffect {
         textSpeed = 400;
       }
     }
-    setTimeout(() => this.type(), textSpeed);
+    setTimeout(() => this.type(), textSpeed);//setTimeout to call the type method/function at each text speed
   }
 }
 function intialize() {
