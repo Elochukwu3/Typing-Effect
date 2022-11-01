@@ -13,11 +13,11 @@ class typeEffect {
     //setting the current word not to exceed the word arrray length
     const current = this.index % this.words.length;
     let eachText = this.words[current];//assigning a variable to the current word
+
     if (this.isDeleting) {
-      this.text = eachText.substring(0, this.text.length - 1);
-      console.log(this.text);
+      this.text = eachText.substring(0, this.text.length - 1);//if isDeleting is true(remove each of the word from back)
     } else {
-      this.text = eachText.substring(0, this.text.length + 1);
+      this.text = eachText.substring(0, this.text.length + 1); //
     }
     this.displayArea.innerHTML = `<span class="txt">${this.text}</span>`;
     let textSpeed = 400;
