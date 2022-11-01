@@ -44,7 +44,7 @@ function intialize() {
     "Software Developer",
     "Frontend Developer",
     "WordPress Developer",
-    "Graphic Designer",
+    "Graphics Designer",
   ];
   const displayArea = document.querySelector(".text-container");
 
