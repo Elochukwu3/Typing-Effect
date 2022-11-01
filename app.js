@@ -43,7 +43,8 @@ function intialize() {
   const data = [
     "Software Developer",
     "Frontend Developer",
-    "Blockchain Developer",
+    "WordPress Developer",
+    "Graphic Designer",
   ];
   const displayArea = document.querySelector(".text-container");
 
