@@ -18,7 +18,7 @@ class typeEffect {
     } else {
       this.text = eachText.substring(0, this.text.length + 1); // if it is not deleting (add each of the word by adding the length)
     }
-    this.displayArea.innerHTML = `<span class="txt">${this.text}</span>`;
+    this.displayArea.innerHTML = `<span class="word">${this.text}</span>`;
     let textSpeed = 400;
 
     if (this.isDeleting) {
